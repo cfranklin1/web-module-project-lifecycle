@@ -1,38 +1,68 @@
-.App {
-  text-align: center;
+body {  
+  
+  background: url("https://cnet2.cbsistatic.com/img/ZfL4WRuKv3LxnxKSAL4UJVHyysg=/940x0/2019/07/29/6109b01f-e32f-457d-9533-cd55b68ba5ba/d6j9ongwaam4yrm.png");
+  color: #fff;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  height: 100%;
+  margin: 1em;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app-div {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  text-align: center;
+  
 }
 
-.App-link {
-  color: #61dafb;
+.img-img {
+  border-radius: 50%;
+  width: 100%;
+  opacity: 0.6;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.user-card {  
+  background: linear-gradient(to bottom, #000,#330072,#004366, #ccc);
+  background-size: cover;
+  width: 40em;
+  border: 1em solid #fff;
+  border-radius: 15%;
+  padding: 0 4em;
+
+}
+
+.followers-card {
+  background-color: #330072;
+  width: 40em;
+  border: 1em solid #fff;
+  border-radius: 15%;
+  padding: 4em;
+
+}
+.back-button {
+  border: .5em solid #fff;
+}
+.profile-button {
+  background-color: #330072;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 1.5em;
+  padding: .2em;
+  width: 5em;
+
+}
+.card-info {
+  
+  padding: 1em;
+}
+
+#gitHub {
+  background-image: url("https://images.g2crowd.com/uploads/product/image/social_landscape/social_landscape_505df21738edbe9baababa9d60be291d/github.png");
+  
+  width: 4em;
+  height: 2em;
+  margin: 1em;
 }
