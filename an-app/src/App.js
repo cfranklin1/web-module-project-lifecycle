@@ -5,9 +5,11 @@ import React from 'react';
 class App extends React.Component {
   
   state = {
+
     info: [],
     followers: [],
     login: ""
+
   }
   
   componentDidMount() {
@@ -21,7 +23,15 @@ class App extends React.Component {
         console.log(err)
       });
 
- 
+    axios.get("https://api.github.com/users/cfranklin1/followers")
+      .then(res => {
+        this.setState({
+          followers: res.data
+        });
+      }) 
+      .catch(err => {
+        console.log(err)
+      });
   }
 
   componentDidUpdate(prevProps, prevState) {
@@ -68,13 +78,25 @@ class App extends React.Component {
           <p>Following: {this.state.info.following}</p>
           <p>Bio: {this.state.info.bio}</p>
         </div>
-
-        <div className="container">
-          {
-          
-          }
-        </div>
+        
       </div>
+
+      {/*--create and move to its own component--*/}
+      <div className="follower-card">
+        <h2>followers:</h2>
+        <img src={this.state.followers.avatar_url} alt='followers-avatar' />
+        <h3 className="name">{this.state.followers.name}</h3>
+          <p className="username">{this.state.followers.login}</p>
+          <p>Location: {this.state.followers.location}</p>
+          <p>Profile:
+            <a href={this.state.followers.url}>{this.state.followers.url}</a>
+          </p>
+          <p>Followers: {this.state.followers.followers}</p>
+          <p>Following: {this.state.followers.following}</p>
+          <p>Bio: {this.state.followers.bio}</p>
+      </div>
+
+
     </>
   };
 }
