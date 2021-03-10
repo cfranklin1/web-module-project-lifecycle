@@ -26,7 +26,7 @@ class App extends React.Component {
     axios.get("https://api.github.com/users/cfranklin1/followers")
       .then(res => {
         this.setState({
-          followers: res.data
+          followers: res.data[0]
         });
       }) 
       .catch(err => {
