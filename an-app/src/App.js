@@ -41,12 +41,14 @@ class App extends React.Component {
           
           <p className="username">{this.state.info.login}</p>
         
-
           <section>
+
             <p>Followers: {this.state.info.followers} 
             <Link to="/Followers" className="follow-link">+</Link></p>
-            <p>Following: {this.state.info.following}</p>  
+            <p>Following: {this.state.info.following}</p>
+
           </section>
+
           <a href={this.state.info.html_url}>
             <button type="button" className="profile-button">Profile</button></a> 
         </div>
